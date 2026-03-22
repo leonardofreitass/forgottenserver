@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.19)
+cmake_policy(SET CMP0167 NEW)
 
 set(CMAKE_DISABLE_SOURCE_CHANGES ON)
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
@@ -100,7 +101,7 @@ if (APPLE)
     find_package(Iconv REQUIRED)
 endif()
 
-set(BOOST_REQUIRED_COMPONENTS system iostreams locale)
+set(BOOST_REQUIRED_COMPONENTS iostreams locale)
 if (HTTP)
     list(APPEND BOOST_REQUIRED_COMPONENTS json)
 endif ()
