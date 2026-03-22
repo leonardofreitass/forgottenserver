@@ -185,3 +185,7 @@ pip-log.txt
 ## TFS / OT
 #############
 config.lua
+
+# Env files
+.env
+.envrc
